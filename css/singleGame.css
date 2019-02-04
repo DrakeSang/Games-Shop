@@ -1,0 +1,404 @@
+.main {
+    margin-bottom: 10px;
+}
+
+.main_pic {
+    padding: 10px;
+   
+}
+
+.main_pic img {
+    width: 100%;
+    height: auto;
+}
+
+/* Gallery styling */
+
+.gallery_pics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    background-color: rgb(0,0,0); /* Fallback color */
+}
+
+.myImg {
+    cursor: pointer;
+    transition: 0.3s;
+    width: 50%;
+    height: 150px;
+    padding: 10px;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+
+.modal {
+    display: none; 
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    overflow: auto; 
+    padding: 10px;
+}
+
+/* Modal Content (image) */
+.modal .modal-content {
+    display: block;
+    width: 100%;
+}
+
+/* Add Animation */
+.modal .modal-content {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+@media only screen and (min-width: 1440px){
+    .modal {
+        width: 50%;
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Details styling */
+
+header h1,
+.price {
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+
+}
+
+.tabs {
+    border: 10px solid #bbb;
+}
+
+.tabs a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 0;
+    text-align: center;
+    color: #262626;
+    font-family: Cataraman;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.tabs a.active{
+    background: #2196f3;
+}
+
+/* Main styling */
+
+.loader {
+    display: none;
+    padding: 20px;
+    margin: 0px auto;
+}
+
+.description.loading .loader {
+    display: block;  
+}
+
+.description.loading .game {
+    display:none;
+} 
+
+.actions.loading {
+    display:none;
+} 
+
+.game {
+    padding: 10px;
+}
+
+.game h2,
+.game p {
+    text-align: center;
+}
+
+.game h2 {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.game p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.comment,
+.shop_cart_game {
+    display: block;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-family: Catamaran;
+    text-decoration: none;
+    text-transform: uppercase;
+    flex-basis: 45%;
+}
+
+/* styling for displaying all comments */
+.comments {
+    margin-top: 15px;
+    padding: 10px;
+    border: 5px solid #bbb;
+}
+
+.comments .top_part {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    align-items: center; 
+}
+
+.top_part img,
+.user_info {
+    width: 45%;
+}
+
+.top_part img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.bottom_part {
+    margin-top: 20px;
+}
+
+.user_info p,
+.bottom_part > p:first-child {
+    text-align: center;
+    font-family: Catamaran;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.bottom_part > p:nth-child(2) {
+    font-family: Catamaran;
+    font-size: 20px;
+    line-height: 30px;    
+}
+
+.comments hr {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px){
+    .main { 
+        display: flex;        
+    }
+
+    .main section {
+        width: 50%;
+    }
+
+    .main .right {
+        position: relative;
+    }
+
+    .right .actions {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+    }
+
+    .comments .top_part {
+        justify-content: flex-start;
+    }
+
+    .top_part img,
+    .user_info {
+        width: 20%;
+    }
+
+    .user_info {
+        padding: 10px;
+    }
+
+}
+@media only screen and (min-width: 1024px){
+    .tabs a {
+        font-size: 25px;
+    }
+
+    .game h2,
+    .game p {
+        text-align: justify;
+        margin-top: 20px;
+    }
+
+    .game h2 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .game p {
+        font-size: 21px;
+        line-height: 30px;
+    }
+
+    .comments {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .comments .top_part,
+    .comments .bottom_part {
+        width: 50%;
+    }
+
+    .top_part img {
+        width: 20%;
+    }
+
+    .user_info {
+        width: 30%;
+    }
+
+    .comments .bottom_part {
+        margin-top: 0; 
+    }
+
+    .bottom_part > p:first-child {
+        text-align: justify;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .game p {
+        font-size: 25px;
+    }
+
+    .gallery_pics img {
+        width: 33%;
+        height: 200px;
+    }
+
+    .comment a {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .right .actions {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .tabs a {
+        font-size: 35px;
+    }
+
+    .game h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .game p {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .top_part img {
+        width: 15%;
+    }
+}
+
+/* Table Styling */
+
+table {
+    width: 100%;
+}
+
+table thead tr td {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px;
+}
+
+table tbody tr {
+    background-color: #f9f9f9; 
+}
+
+table tbody tr th,
+table tbody tr td {
+    padding: 10px;
+    font-size: 20px;
+}
+
+table > tbody > tr {
+    border-top: 1px solid #DDD;
+}
+
+@media only screen and (min-width: 1024px){
+    table thead tr td {
+        white-space: nowrap;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    table tbody tr td {
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    table thead tr td {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    table tbody tr th,
+    table tbody tr td {
+        padding: 15px;
+        font-size: 30px;
+    }
+}

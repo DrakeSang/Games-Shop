@@ -1,0 +1,276 @@
+/* Mobile styling */
+
+* {
+    box-sizing: border-box;
+}
+
+.header-overlay {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header.navigation-header {
+    width: 100%;
+    background-color: #262626;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-menu-toggle,
+.user-actions-toggle {
+    font-size: 40px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.fa {
+    color: #2196f3;
+}
+
+.header-logo img {
+    width: auto;
+    height: 40px;
+}
+
+.header-nav {
+    width: 100%;
+    background: #333;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    transition: all 2s ease-in 1s;
+}
+
+.header-nav ul,
+.header-actions ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+.header-nav ul li a,
+.header-actions ul li a {
+    display: block;
+    padding: 10px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-family: Catamaran;
+    font-size: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
+
+header nav ul li a:hover,
+.header-actions a:hover{
+    background: #2196f3;
+}
+
+.header-nav.show,
+.header-actions.show {
+    left: 0; 
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-container input[type=text] {
+    padding: 6px 0 6px 6px;
+    font-size: 20px;
+}
+
+.search-container button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 5px 10px;
+    background: #ddd;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header-actions {
+    width: 100%;
+    background: #333;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transition: all 2s ease-in 1s;
+}
+
+/* Tablet Styling */
+
+@media only screen and (min-width: 768px) {
+    .nav-menu-toggle{
+        display: none;
+    }
+
+    .header-logo img {
+        width: 75px;
+    }
+
+    .header-nav ul li:not(:first-child) {
+        margin-left: 3px;
+    }
+
+    header {
+        position: static;
+    }
+
+    .header-nav {
+        width: fit-content;  
+        position: static;
+        top: 0;
+        transition: none;  
+        background: none;   
+    }
+
+    .header-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    
+    .header-nav ul li,
+    .tablet-version {
+        height: 100%;
+        display: table !important;
+    }
+
+    .header-nav ul li a {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        padding: 0 10px;
+        font-size: 18px;
+        border: none;
+    }
+
+    .search-container {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .search-container input[type=text] {
+        padding: 6px;
+        font-size: 12px;
+        border: none;
+        height: 100%;
+    }
+    
+    .search-container button {
+        border: none;
+    }
+
+    .header-logo {
+        order: 1;
+    }
+
+    .header-nav {
+        order: 2;
+    }
+
+    .user-actions-toggle {
+        order: 3;
+    }
+}
+
+/* Laptop styling */
+
+@media only screen and (min-width: 1000px) {
+    .user-actions-toggle {
+        display: none;
+    }
+
+    .header-logo {
+        display: block !important;
+    }
+
+    
+    .header-actions ul li:not(:first-child) {
+        margin-left: 3px;
+    }
+
+    .header-actions {
+        width: fit-content;  
+        position: static;
+        top: 0;
+        transition: none;  
+        background: none;
+    }
+
+    .header-actions ul {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .header-actions ul li {
+        height: 100%;
+        display: table !important; 
+    }
+
+    .header-actions ul li a {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        padding: 0 10px;
+        font-size: 17px;
+        border: none;
+    }
+
+    .header-logo {
+        order: 1;
+    }
+
+    .header-nav {
+        order: 2;
+    }
+
+    .header-actions {
+        order: 3;
+    }
+}
+
+/* Laptop with bigegr resolution */
+
+@media only screen and (min-width: 1440px) {
+    .header-nav ul li a,
+    .header-actions ul li a {
+        font-size : 22px;
+    }
+
+    .header-logo img {
+        width: auto;
+        height: 70px;
+    } 
+
+    .search-container input[type=text],
+    .search-container button {
+        font-size: 22px;
+    }
+
+    .search-container input[type=text] {
+        height: auto;
+    }
+
+    .search-container button {
+        height: auto;
+        top : 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .header-nav ul li a,
+    .header-actions ul li a {
+        font-size: 30px;
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,140 @@
+/* Products styling */
+
+.products {
+    width: 100%;
+}
+
+.products-header {
+    background: #262626;
+    display: flex;
+    padding: 10px;
+    position: relative;
+}
+
+.products-toggle-button {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.products-navigation li a:hover,
+.products-toggle-button:hover
+{
+    opacity:0.5;
+}
+
+.products-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.products-navigation li {
+    line-height: 30px;
+    display: table;
+    height: 100%;
+}
+
+.products-navigation li a {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 8px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Catamaran;
+    font-size: 20px;
+}
+
+.products-navigation li a.active,
+.products-sidebar ul li span.active {
+    background: #2196f3;
+}
+
+/* Aside bar styling */
+
+.products-sidebar {
+    background: #333;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    transition: all 2s ease-in 1s;
+    z-index: 1000;
+}
+
+.products-sidebar ul {
+    list-style-type: none;
+}
+
+.products-sidebar ul li span {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-family: Catamaran;
+    font-size: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
+
+.products-sidebar ul li:not(:first-child):hover {
+    cursor: pointer;
+    opacity:0.5;
+}
+
+.products-sidebar.show {
+    left: 0; 
+}
+
+.products-sidebar ul li:first-child span {
+    padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .products-toggle-button {
+        font-size: 40px;
+    }
+
+    .products-navigation {
+        padding-left: 20px;
+    }
+
+    .products-navigation li a {
+        font-size: 25px;
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .products-sidebar ul li:first-child span {
+        padding: 20px;
+    } 
+
+    .products-toggle-button {
+        font-size: 45px;
+    }
+
+    .products-navigation {
+        padding-left: 25px;
+    }
+
+    .products-navigation li a {
+        font-size: 30px;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .products-toggle-button {
+        font-size: 50px;
+    }
+
+    .products-navigation {
+        padding-left: 30px;
+    }
+
+    .products-navigation li a {
+        font-size: 35px;
+        padding: 0 25px;
+    }
+}

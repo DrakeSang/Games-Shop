@@ -1,0 +1,272 @@
+.empty {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1b1b; 
+}
+
+.empty p,
+.empty a {
+    font-size: 20px;
+    font-family: Catamaran;
+    line-height: 30px;
+    color: #f8b700;
+}
+
+.empty a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 768px){
+    .empty p,
+    .empty a {
+        font-size: 40px;
+        line-height: 80px;
+    } 
+}
+
+@media only screen and (min-width: 1024px){
+    .empty p,
+    .empty a {
+        line-height: 120px;
+    } 
+}
+
+@media only screen and (min-width: 1024px){
+    .empty p,
+    .empty a {
+        line-height: 125px;
+    } 
+}
+
+@media only screen and (min-width: 1920px){
+    .empty p,
+    .empty a {
+        font-size: 50px;
+        line-height: 135px;
+    } 
+}
+
+/* games styling */
+
+.games_container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.box {
+    flex-basis: 40%;
+    margin-bottom: 10px;
+}
+
+.box:nth-child(odd) {
+    margin-right: calc((100% / 2) - 40%);
+}
+
+.box:nth-child(even) {
+    margin-left: calc((100% / 2) - 40%);
+}
+
+.games_container form {
+    border: 1px solid #333;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    height: 100%;
+}
+
+.games_container form img {
+    width: 100%;
+}
+
+.games_container form h4 {
+    font-family: Catamaran;
+    line-height: 30px;
+    text-align: center;
+}
+
+.games_container input[type="text"] {
+    display: block;
+    width: 100%;
+    margin: 10px 0; 
+}
+
+.games_container input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .box:nth-child(odd) {
+        margin-right: 0
+    }
+
+    .box:nth-child(even) {
+        margin-left: 0;
+    }
+
+    .box {
+        padding: 15px;
+    }
+
+    .games_container .box {
+        flex-basis: 33%;
+    }
+
+    .games_container input[type="text"] {
+        width: 50%;
+        margin: 10px auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .games_container .box {
+        flex-basis: 25%;
+    }
+    
+    .games_container .box form h4,
+    .games_container .box form input[type="text"],
+    .games_container .box form input[type="submit"] {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .games_container .box form h4,
+    .games_container .box form input[type="text"],
+    .games_container .box form input[type="submit"] {
+        font-size: 25px;
+        line-height: 35px;
+    }
+}
+
+/* table styling */
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+  
+table caption {
+  font-size: 30px;
+  margin: 15px 0;
+  font-family: Catamaran;
+}
+  
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+}
+  
+table th,
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* .btn-danger {
+    font-size: 12px;
+    padding: 3px;
+} */
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    background: #6394F8;
+    color:white;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background: #7fa9ff;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-danger a {
+    color: #7fa9ff;
+}
+  
+  
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+      font-size: 25px;
+    }
+
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 15px;
+      font-family: Catamaran;
+      text-align: right;
+    }
+
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    table th,
+    table td {
+        font-size: 20px;
+        font-family: Catamran;
+    }
+
+    table td {
+        padding: 15px;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    table caption {
+        font-size: 40px;
+    }
+
+    table th, 
+    table td {
+        font-size: 30px;
+    }
+}

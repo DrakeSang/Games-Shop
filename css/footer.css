@@ -1,0 +1,147 @@
+footer {
+    background-color: #323232;
+    padding: 20px;
+}
+
+/* Styling footer services */
+
+.service-column {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.service-column .left-part,
+.service-column .right-part {
+    padding: 10px;
+}
+
+.service-column .right-part {
+    color: #888;
+    font-family:Catamaran;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.service-column a,
+.content li a {
+    text-decoration: none;
+    color: #1B8EF9;
+}
+
+@media only screen and (min-width: 768px) {
+    .service-footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .service-column {
+        flex-basis: 25%;
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .service-column .left-part,
+    .service-column .right-part {
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .service-column .right-part {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+/* Styling hr line */
+
+hr {
+    height: 3px;
+    background-color: #fff;
+	border: 2px dashed #8c8b8b;
+}
+
+/* Styling title section */
+.column {
+    padding-bottom: 10px; 
+}
+
+.header {
+    font-family: Catamaran;
+    font-size: 20px;
+    padding: 5px;
+    color: #666;
+    background-color: whitesmoke; 
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content {
+    background: #FFF;
+    display: none;
+    list-style-type: none;
+}
+
+.content li a {
+    font-family:Catamaran;
+    color: #888888;
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    .information-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .header {
+        cursor: auto;
+    }
+    
+    .column {
+        padding: 0;
+        flex-basis: 25%;
+    }
+
+    .header {
+        padding: 8px;
+        background: none;
+        text-align: start;
+    }
+
+    .content {
+        display: block;
+        background: none;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .content li a {
+        padding: 8px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .column {
+        flex-basis: 20%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .header {
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    .content li a {
+        padding: 10px;
+        font-size: 25px;
+    }
+}
