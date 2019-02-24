@@ -4,7 +4,7 @@ namespace Data\Games;
 
 use Data\Games\Game;
 use Data\Games\Gallery;
-use Data\Games\Comment;
+use Data\Comments\Comment;
 
 class GameIndexViewData
 {

@@ -119,7 +119,9 @@
         <div class="main">
             <?php foreach ($data->getLastAddedGames() as $game): ?>
             <div class="box">
-                <a href="game.php?game_id=<?= $game->getId(); ?>"><img src="<?= $game->getGamePic(); ?>"></a>
+                <a href="game.php?game_id=<?= $game->getId(); ?>">
+                    <img src="<?= $game->getGamePic(); ?>">
+                </a>
                 
                 <p>
                     <?= $game->getGameName(); ?> 

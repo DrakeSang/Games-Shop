@@ -17,7 +17,7 @@ $data = $gameService->getNewestGames($choosedConsoleType);
 <div class="main">
     <?php foreach ($data->getLastAddedGames() as $game): ?>
         <div class="box">
-            <a href="game.php?id=<?= $game->getId(); ?>"> 
+            <a href="game.php?game_id=<?= $game->getId(); ?>">
                 <img src="<?= $game->getGamePic(); ?>">
             </a>
             

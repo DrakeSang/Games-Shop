@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 use Service\Game\GameService;
 
@@ -17,17 +17,16 @@ $data = $gameService->getGamesOnPromotion($choosedConsoleType);
 <div class="main">
     <?php foreach ($data->getGamesOnPromotion() as $game): ?>
         <div class="box">
-            <a href="game.php?id=<?= $game->getId(); ?>">   
+            <a href="game.php?game_id=<?= $game->getId(); ?>">
                 <img src="<?= $game->getGamePic(); ?>">
             </a>
-            
+
             <p>
-                <?= $game->getGameName(); ?> 
+                <?= $game->getGameName(); ?>
                 <br>
                 <?= $game->{'consoleName'}; ?>
             </p>
             <p><?= $game->getGamePrice(); ?> лв.</p>
-            </div>
-        <?php endforeach; ?>     
-    </div>   
-</div> 
+        </div>
+    <?php endforeach; ?>
+</div>

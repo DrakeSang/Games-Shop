@@ -12,7 +12,7 @@ $consoleType = $_POST['consoleType'];
 // define how many results you want per page
 $results_per_page = 5;
 
-// determine which page number visitor is currenly on
+// determine which page number visitor is currently on
 if(isset($_GET['page'])){
     $page = $_GET['page'];
 }else {

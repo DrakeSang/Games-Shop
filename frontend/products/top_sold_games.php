@@ -17,7 +17,7 @@ $data = $gameService->getTopSoldGames($choosedConsoleType);
 <div class="main">
     <?php foreach ($data->getTopSoldGames() as $game): ?>
         <div class="box">
-            <a href="game.php?id=<?= $game->getId(); ?>">   
+            <a href="game.php?game_id=<?= $game->getId(); ?>">
                 <img src="<?= $game->getGamePic(); ?>">
             </a>
             
@@ -27,7 +27,6 @@ $data = $gameService->getTopSoldGames($choosedConsoleType);
                 <?= $game->{'consoleName'}; ?>
             </p>
             <p><?= $game->getGamePrice(); ?> лв.</p>
-            </div>
-        <?php endforeach; ?>     
-    </div>   
-</div> 
+        </div>
+    <?php endforeach; ?>
+</div>
